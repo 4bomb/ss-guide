@@ -6,64 +6,528 @@
   <title>StyleShare 웹 컴포넌트 가이드</title>
   <link rel="stylesheet" href="css/default.css">
 </head>
+
 <body>
 
-<section class="section-intro">
-  <div class="container">
-    <h1 class="header-intro">
-      버튼 가이드
-    </h1>
-  </div>
-</section>
-
-<section class="section-button-size">
-  <div class="container">
-
-    <h4 class="section-title">Button Size</h4>
-    <p class="section-description">버튼 크기는 extralarge, large, medium, small, extrasmall가 있습니다.</p>
-
-    <div class="component-container">
-
-      <div class="component-wrapper button-size">
-        <h5 class="component-title">Extralarge</h5>
-        <button class="extralarge green button">
-        Basic button
-        </button>
-      </div>
-
-      <div class="component-wrapper button-size">
-        <h5 class="component-title">Large</h5>
-        <button class="large green button">
-        Basic button
-        </button>
-      </div>
-
-      <div class="component-wrapper button-size">
-        <h5 class="component-title">Medium</h5>
-        <button class="medium green button">
-        Basic button
-        </button>
-      </div>
-
-      <div class="component-wrapper button-size">
-        <h5 class="component-title">Small</h5>
-        <button class="small green button">
-        Basic button
-        </button>
-      </div>
-
-      <div class="component-wrapper button-size">
-        <h5 class="component-title">Extrasmall</h5>
-        <button class="extrasmall green button">
-        Basic button
-        </button>
-      </div>
-
+  <section class="section intro">
+    <div class="container">
+      <h1 class="header intro">색상</h1>
+      <hr>
     </div>
+  </section>
 
+  <section class="section color-scheme">
+    <div class="container">
+      <h4 class="section-title">Primary Colors</h4>
+      <p class="section-description">주요 색상은 Green이며, 이 외에 Yellow와 Red가 있습니다.</p>
+      <div class="component-container color-scheme">
+        <div class="component-wrapper color-scheme">
+          <div class="color-chip">
+            <div class="color-name green">StyleShare Green</div>
+            <table class="color-info">
+              <tbody>
+                <tr>
+                  <th class="color-info-title">Name</th>
+                  <td class="color-info-value">$green</td>
+                </tr>
+                <tr>
+                  <th class="color-info-title">HEX</th>
+                  <td class="color-info-value">#4adaaf</td>
+                </tr>
+                <tr>
+                  <th class="color-info-title">Pantone</th>
+                  <td class="color-info-value">-</td>
+                </tr>
+                <tr>
+                  <th class="color-info-title">CMYK</th>
+                  <td class="color-info-value">-</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="component-wrapper color-scheme">
+          <div class="color-chip">
+            <div class="color-name red">StyleShare Red</div>
+            <table class="color-info">
+              <tbody>
+                <tr>
+                  <th class="color-info-title">Name</th>
+                  <td class="color-info-value">$red</td>
+                </tr>
+                <tr>
+                  <th class="color-info-title">HEX</th>
+                  <td class="color-info-value">#ff6699</td>
+                </tr>
+                <tr>
+                  <th class="color-info-title">Pantone</th>
+                  <td class="color-info-value">-</td>
+                </tr>
+                <tr>
+                  <th class="color-info-title">CMYK</th>
+                  <td class="color-info-value">-</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="component-wrapper color-scheme">
+          <div class="color-chip">
+            <div class="color-name yellow">StyleShare Yellow</div>
+            <table class="color-info">
+              <tbody>
+                <tr>
+                  <th class="color-info-title">Name</th>
+                  <td class="color-info-value">$yellow</td>
+                </tr>
+                <tr>
+                  <th class="color-info-title">HEX</th>
+                  <td class="color-info-value">#ffff66</td>
+                </tr>
+                <tr>
+                  <th class="color-info-title">Pantone</th>
+                  <td class="color-info-value">-</td>
+                </tr>
+                <tr>
+                  <th class="color-info-title">CMYK</th>
+                  <td class="color-info-value">-</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  </div>
-</section>
+  <section class="section color-scheme">
+    <div class="container">
+      <h4 class="section-title">Greyscale Colors</h4>
+      <p class="section-description">회색조의 색상은 다섯가지가 있습니다.</p>
+      <div class="component-container color-scheme">
+        <div class="component-wrapper color-scheme">
+          <div class="color-chip">
+            <div class="color-name black">StyleShare Black</div>
+            <table class="color-info">
+              <tbody>
+                <tr>
+                  <th class="color-info-title">Name</th>
+                  <td class="color-info-value">$black</td>
+                </tr>
+                <tr>
+                  <th class="color-info-title">HEX</th>
+                  <td class="color-info-value">#222222</td>
+                </tr>
+                <tr>
+                  <th class="color-info-title">Pantone</th>
+                  <td class="color-info-value">-</td>
+                </tr>
+                <tr>
+                  <th class="color-info-title">CMYK</th>
+                  <td class="color-info-value">-</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="component-wrapper color-scheme">
+          <div class="color-chip">
+            <div class="color-name dark-gray">StyleShare Dark Gray</div>
+            <table class="color-info">
+              <tbody>
+                <tr>
+                  <th class="color-info-title">Name</th>
+                  <td class="color-info-value">$dark-gray</td>
+                </tr>
+                <tr>
+                  <th class="color-info-title">HEX</th>
+                  <td class="color-info-value">#666666</td>
+                </tr>
+                <tr>
+                  <th class="color-info-title">Pantone</th>
+                  <td class="color-info-value">-</td>
+                </tr>
+                <tr>
+                  <th class="color-info-title">CMYK</th>
+                  <td class="color-info-value">-</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="component-wrapper color-scheme">
+          <div class="color-chip">
+            <div class="color-name medium-gray">StyleShare Medium Gray</div>
+            <table class="color-info">
+              <tbody>
+                <tr>
+                  <th class="color-info-title">Name</th>
+                  <td class="color-info-value">$medium-gray</td>
+                </tr>
+                <tr>
+                  <th class="color-info-title">HEX</th>
+                  <td class="color-info-value">#999999</td>
+                </tr>
+                <tr>
+                  <th class="color-info-title">Pantone</th>
+                  <td class="color-info-value">-</td>
+                </tr>
+                <tr>
+                  <th class="color-info-title">CMYK</th>
+                  <td class="color-info-value">-</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="component-wrapper color-scheme">
+          <div class="color-chip">
+            <div class="color-name light-gray">StyleShare Light Gray</div>
+            <table class="color-info">
+              <tbody>
+                <tr>
+                  <th class="color-info-title">Name</th>
+                  <td class="color-info-value">$light-gray</td>
+                </tr>
+                <tr>
+                  <th class="color-info-title">HEX</th>
+                  <td class="color-info-value">#cccccc</td>
+                </tr>
+                <tr>
+                  <th class="color-info-title">Pantone</th>
+                  <td class="color-info-value">-</td>
+                </tr>
+                <tr>
+                  <th class="color-info-title">CMYK</th>
+                  <td class="color-info-value">-</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="component-wrapper color-scheme">
+          <div class="color-chip">
+            <div class="color-name border">StyleShare Border</div>
+            <table class="color-info">
+              <tbody>
+                <tr>
+                  <th class="color-info-title">Name</th>
+                  <td class="color-info-value">$border</td>
+                </tr>
+                <tr>
+                  <th class="color-info-title">HEX</th>
+                  <td class="color-info-value">#dedede</td>
+                </tr>
+                <tr>
+                  <th class="color-info-title">Pantone</th>
+                  <td class="color-info-value">-</td>
+                </tr>
+                <tr>
+                  <th class="color-info-title">CMYK</th>
+                  <td class="color-info-value">-</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section color-scheme">
+    <div class="container">
+      <h4 class="section-title">Status Rule</h4>
+      <p class="section-description">Hover, Press 된 상태일 때의 색상 규칙입니다. Disalble 상태의 버튼은 Light Gray를 사용합니다.</p>
+      <div class="component-container color-scheme">
+        <div class="component-wrapper color-scheme">
+          <div class="color-chip">
+            <div class="color-name green">StyleShare Green</div>
+            <table class="color-info">
+              <tbody>
+                <tr>
+                  <th class="color-info-title">Name</th>
+                  <td class="color-info-value">$green</td>
+                </tr>
+                <tr>
+                  <th class="color-info-title">HEX</th>
+                  <td class="color-info-value">#4adaaf</td>
+                </tr>
+                <tr>
+                  <th class="color-info-title">Rule</th>
+                  <td class="color-info-value">-</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="component-wrapper color-scheme">
+          <div class="color-chip">
+            <div class="color-name hover-green">StyleShare Hover Green</div>
+            <table class="color-info">
+              <tbody>
+                <tr>
+                  <th class="color-info-title">Name</th>
+                  <td class="color-info-value">$hover-green</td>
+                </tr>
+                <tr>
+                  <th class="color-info-title">HEX</th>
+                  <td class="color-info-value">#42c49d</td>
+                </tr>
+                <tr>
+                  <th class="color-info-title">Rule</th>
+                  <td class="color-info-value">$black opacity 10%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="component-wrapper color-scheme">
+          <div class="color-chip">
+            <div class="color-name press-green">StyleShare Press Green</div>
+            <table class="color-info">
+              <tbody>
+                <tr>
+                  <th class="color-info-title">Name</th>
+                  <td class="color-info-value">$green</td>
+                </tr>
+                <tr>
+                  <th class="color-info-title">HEX</th>
+                  <td class="color-info-value">#4adaaf</td>
+                </tr>
+                <tr>
+                  <th class="color-info-title">Rule</th>
+                  <td class="color-info-value">$black opacity 18%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="component-wrapper color-scheme">
+          <div class="color-chip">
+            <div class="color-name black">StyleShare Black</div>
+            <table class="color-info">
+              <tbody>
+                <tr>
+                  <th class="color-info-title">Name</th>
+                  <td class="color-info-value">$black</td>
+                </tr>
+                <tr>
+                  <th class="color-info-title">HEX</th>
+                  <td class="color-info-value">#222222</td>
+                </tr>
+                <tr>
+                  <th class="color-info-title">Rule</th>
+                  <td class="color-info-value">-</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="component-wrapper color-scheme">
+          <div class="color-chip">
+            <div class="color-name hover-black">StyleShare Hover Black</div>
+            <table class="color-info">
+              <tbody>
+                <tr>
+                  <th class="color-info-title">Name</th>
+                  <td class="color-info-value">$hover-black</td>
+                </tr>
+                <tr>
+                  <th class="color-info-title">HEX</th>
+                  <td class="color-info-value">#393939</td>
+                </tr>
+                <tr>
+                  <th class="color-info-title">Rule</th>
+                  <td class="color-info-value">$white opacity 10%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="component-wrapper color-scheme">
+          <div class="color-chip">
+            <div class="color-name press-black">StyleShare Press Black</div>
+            <table class="color-info">
+              <tbody>
+                <tr>
+                  <th class="color-info-title">Name</th>
+                  <td class="color-info-value">$press-black</td>
+                </tr>
+                <tr>
+                  <th class="color-info-title">HEX</th>
+                  <td class="color-info-value">#4a4a4a</td>
+                </tr>
+                <tr>
+                  <th class="color-info-title">Rule</th>
+                  <td class="color-info-value">$white opacity 18%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section intro">
+    <div class="container">
+      <h1 class="header intro">타이포그래피</h1>
+      <hr>
+    </div>
+  </section>
+
+  <section class="section typo-headline">
+    <div class="container">
+      <h4 class="section-title">Headline Size</h4>
+      <p class="section-description">헤드라인은 44px, 34px, 24px, 18px로 네가지의 크기가 있습니다.</p>
+      <div class="component-container">
+        <div class="component-wrapper typo-headline">
+          <div class="component-title typo">Headline 1</div>
+          <h1>가あA</h1>
+        </div>
+        <div class="component-wrapper typo-headline">
+          <div class="component-title typo">Headline 2</div>
+          <h2>가あA</h2>
+        </div>
+        <div class="component-wrapper typo-headline">
+          <div class="component-title typo">Headline 3</div>
+          <h3>가あA</h3>
+        </div>
+        <div class="component-wrapper typo-headline">
+          <div class="component-title typo">Headline 4</div>
+          <h4>가あA</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section typo-body">
+    <div class="container">
+      <h4 class="section-title">Body Size</h4>
+      <p class="section-description">본문은 14px, 13px, 12px로 세가지의 크기가 있습니다.</p>
+      <div class="component-container">
+        <div class="component-wrapper typo-body">
+          <div class="component-title typo">Body 1</div>
+          <p class="body1">더 많은 사람들이 자신만의 멋을 찾아갈 수 있도록 Look good. Feel good. Do good.</p>
+        </div>
+        <div class="component-wrapper typo-body">
+          <div class="component-title typo">Body 2</div>
+          <p class="body2">더 많은 사람들이 자신만의 멋을 찾아갈 수 있도록 Look good. Feel good. Do good.</p>
+        </div>
+        <div class="component-wrapper typo-body">
+          <div class="component-title typo">Caption</div>
+          <p class="caption">더 많은 사람들이 자신만의 멋을 찾아갈 수 있도록 Look good. Feel good. Do good.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section intro">
+    <div class="container">
+      <h1 class="header intro">버튼 가이드</h1>
+      <hr>
+    </div>
+  </section>
+
+  <section class="section button-style">
+    <div class="container">
+      <h4 class="section-title">Button Style</h4>
+      <p class="section-description">버튼 스타일은 Basic과 Ghost가 있습니다.</p>
+      <div class="component-container button-style">
+        <div class="component-wrapper">
+          <h5 class="component-title">Basic</h5>
+          <button class="large green button">
+            Basic button
+          </button>
+        </div>
+        <div class="component-wrapper">
+          <h5 class="component-title">Ghost</h5>
+          <button class="large green ghost button">
+            Ghost button
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section button-size">
+    <div class="container">
+      <h4 class="section-title">Button Size</h4>
+      <p class="section-description">버튼 크기는 extralarge, large, medium, small, extrasmall가 있습니다.</p>
+      <div class="component-container button-size">
+        <div class="component-wrapper">
+          <h5 class="component-title">Extralarge</h5>
+          <button class="extralarge green button">
+            Basic button
+          </button>
+        </div>
+        <div class="component-wrapper">
+          <h5 class="component-title">Large</h5>
+          <button class="large green button">
+            Basic button
+          </button>
+        </div>
+        <div class="component-wrapper">
+          <h5 class="component-title">Medium</h5>
+          <button class="medium green button">
+            Basic button
+          </button>
+        </div>
+        <div class="component-wrapper">
+          <h5 class="component-title">Small</h5>
+          <button class="small green button">
+            Basic button
+          </button>
+        </div>
+        <div class="component-wrapper">
+          <h5 class="component-title">Extrasmall</h5>
+          <button class="extrasmall green button">
+            Basic button
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section button-size">
+    <div class="container">
+      <h4 class="section-title">Ghost Button Size</h4>
+      <p class="section-description">고스트 버튼의 크기는 기본형과 동일하며, 크기마다 외곽선의 굵기가 다릅니다.</p>
+      <div class="component-container button-size">
+        <div class="component-wrapper">
+          <h5 class="component-title">Extralarge</h5>
+          <button class="extralarge green ghost button">
+            Basic button
+          </button>
+        </div>
+        <div class="component-wrapper">
+          <h5 class="component-title">Large</h5>
+          <button class="large green ghost button">
+            Basic button
+          </button>
+        </div>
+        <div class="component-wrapper">
+          <h5 class="component-title">Medium</h5>
+          <button class="medium green ghost button">
+            Basic button
+          </button>
+        </div>
+        <div class="component-wrapper">
+          <h5 class="component-title">Small</h5>
+          <button class="small green ghost button">
+            Basic button
+          </button>
+        </div>
+        <div class="component-wrapper">
+          <h5 class="component-title">Extrasmall</h5>
+          <button class="extrasmall green ghost button">
+            Basic button
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
 
 </body>
+
 </html>

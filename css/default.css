@@ -124,72 +124,168 @@ img {
 body {
   font-family: 'Apple SD Gothic Neo', Sans-serif;
   font-size: 14px;
+  letter-spacing: -.015em;
+  word-spacing: .09em;
   word-break: keep-all;
   color: #222; }
 
 h1 {
   font-weight: 700;
-  font-size: 35px;
+  font-size: 44px;
   letter-spacing: -.03em; }
 
 h2 {
   font-weight: 700;
-  font-size: 35px;
+  font-size: 34px;
   letter-spacing: -.03em; }
 
 h3 {
-  font-weight: 500;
-  font-size: 30px;
+  font-weight: 700;
+  font-size: 24px;
   letter-spacing: -.02em; }
 
 h4 {
   font-weight: 700;
-  font-size: 20px; }
+  font-size: 18px; }
 
 p {
   font-weight: 300;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.65em; }
 
 /*******************************
           Web Layout
 *******************************/
-.section-description {
-  margin-top: 6px; }
+hr {
+  margin: 10px 0;
+  border: 1px solid #dedede;
+  border-bottom: 0; }
+
+.section {
+  padding: 60px 0; }
+  .section-title {
+    font-size: 22px; }
+  .section-description {
+    margin-top: 6px;
+    font-size: 16px;
+    color: #666; }
 
 .component-container {
   margin-top: 30px; }
 .component-wrapper {
   position: relative;
+  width: 20%;
   height: 100%;
   display: inline-block;
   float: left;
   min-height: 1px; }
 .component-title {
-  padding: 6px 0;
-  font-weight: 500;
+  padding: 8px 0;
+  font-weight: 700;
   font-size: 14px;
   color: #999; }
 
-/*--------------
-      Intro
----------------*/
-.section-intro {
-  padding: 80px 0px 110px; }
+.component-title.typo {
+  padding: 8px 0 16px; }
 
-.header-intro {
+/*--- Intro ---*/
+.section.intro {
+  padding: 130px 0px 40px; }
+
+.header.intro {
   font-weight: 500;
   font-size: 40px; }
 
-/*--------------
-    Button-size
----------------*/
-.component-wrapper.button-size {
-  width: 20%; }
+/*--- Color-scheme ---*/
+.component-container.color-scheme {
+  margin-top: 15px; }
+
+.component-wrapper.color-scheme {
+  width: 33.3333%;
+  padding: 15px 0;
+  padding-right: 30px; }
+
+.color-chip {
+  border: 1px solid #dedede; }
+.color-name {
+  height: 180px;
+  padding: 24px;
+  color: white;
+  font-weight: 700;
+  font-size: 16px; }
+.color-info {
+  margin: 12px 26px;
+  text-align: left; }
+  .color-info-title {
+    width: 90px;
+    padding: 6px 0;
+    color: #666; }
+
+.green.color-name {
+  background-color: #4adaaf; }
+
+.hover-green.color-name {
+  background-color: #42c49d; }
+
+.press-green.color-name {
+  background-color: #3db591; }
+
+.red.color-name {
+  background-color: #ff6699; }
+
+.yellow.color-name {
+  background-color: #ffff66;
+  color: #666; }
+
+.black.color-name {
+  background-color: #222; }
+
+.hover-black.color-name {
+  background-color: #393939; }
+
+.press-black.color-name {
+  background-color: #4a4a4a; }
+
+.dark-gray.color-name {
+  background-color: #666; }
+
+.medium-gray.color-name {
+  background-color: #999; }
+
+.light-gray.color-name {
+  background-color: #ccc; }
+
+.border.color-name {
+  background-color: #dedede;
+  color: #666; }
+
+/*--- Typo-headline ---*/
+.typo-headline.component-wrapper {
+  width: 25%; }
+
+/*--- Typo-body ---*/
+.typo-body.component-wrapper {
+  width: 33.33333%;
+  padding-right: 40px; }
+
+/*******************************
+              Typo
+*******************************/
+.body1 {
+  font-size: 14px; }
+
+.body2 {
+  font-size: 13px; }
+
+.caption {
+  font-size: 12px; }
 
 /*******************************
             Button
 *******************************/
+/*--------------
+      Style
+---------------*/
 .button {
   cursor: pointer;
   display: inline-block;
@@ -197,9 +293,13 @@ p {
   outline: none;
   border: none; }
 
+.ghost.button {
+  background-color: transparent; }
+
 /*--------------
       Color
 ---------------*/
+/*--- Green ---*/
 .green.button {
   background-color: #4adaaf;
   color: #fff; }
@@ -210,9 +310,27 @@ p {
 .green.button:active {
   background-color: #3db591; }
 
+/* Ghost */
+.ghost.green {
+  background-color: transparent;
+  border-color: #4adaaf;
+  color: #4adaaf; }
+
+.ghost.green:hover {
+  background-color: transparent;
+  border-color: #42c49d;
+  color: #42c49d; }
+
+.ghost.green:active {
+  background-color: transparent;
+  border-color: #3db591;
+  color: #3db591; }
+
+/*--- White ---*/
 /*--------------
       Size
 ---------------*/
+/*--- Basic ---*/
 .extralarge.button {
   height: 50px;
   font-weight: bold;
@@ -252,5 +370,21 @@ p {
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px; }
+
+/*--- Ghost ---*/
+.ghost.extralarge {
+  border: 2px solid; }
+
+.ghost.large {
+  border: 2px solid; }
+
+.ghost.medium {
+  border: 2px solid; }
+
+.ghost.small {
+  border: 1px solid; }
+
+.ghost.extrasmall {
+  border: 1px solid; }
 
 /*# sourceMappingURL=default.css.map */
