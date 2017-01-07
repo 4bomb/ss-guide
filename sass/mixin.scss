@@ -1,0 +1,36 @@
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin shadow {
+  -webkit-box-shadow: 0px 2px 2px 0px rgba(34,34,34,0.05);
+     -moz-box-shadow: 0px 2px 2px 0px rgba(34,34,34,0.05);
+          box-shadow: 0px 2px 2px 0px rgba(34,34,34,0.05);
+}
+
+@mixin easeOutBack($ms){
+  -webkit-transition: all $ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition:         all $ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@mixin easeOutCirc($ms){
+  -webkit-transition: all $ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition:         all $ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+
+// 웹 브레이크 포인트
+$breakpoints: ( 'narrow': (min-width: 700px), 'middle': (min-width: 1170px), 'wide': (min-width: 1600px), );
+// 브레이크 포인트 매니저
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  }
+  @else {
+    @error "No value found for '#{$breakpoint}'. " + "Please make sure it is defined in '$breakpoints' map.";
+  }
+}

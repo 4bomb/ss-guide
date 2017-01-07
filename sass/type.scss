@@ -1,0 +1,94 @@
+@font-face {
+    font-family: 'Euclid Flex';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../font/EuclidFlex-Bold.otf');
+}
+
+@font-face {
+    font-family: 'Euclid Flex';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../font/EuclidFlex-Medium.otf');
+}
+
+@font-face {
+    font-family: 'Euclid Flex';
+    font-style: normal;
+    font-weight: 100;
+    src: url('../font/EuclidFlex-Ultralight.otf');
+}
+
+@font-face {
+    font-family: 'SpoqahanSans';
+    font-weight: 700;
+    src: local('SpoqaHanSans-Bold'), local('SpoqaHanSans-Bold'),
+    url(https://cdn.rawgit.com/spoqa/spoqa-han-sans/master/Subset/SpoqaHanSans/Spoqa%20Han%20sans_subset%28webfont%20inclued%29/SpoqaHanSans-Bold/SpoqaHanSans-Bold.eot) format('eot'),
+    url(https://cdn.rawgit.com/spoqa/spoqa-han-sans/master/Subset/SpoqaHanSans/Spoqa%20Han%20sans_subset%28webfont%20inclued%29/SpoqaHanSans-Bold/SpoqaHanSans-Bold.svg) format('svg'),
+    url(https://cdn.rawgit.com/spoqa/spoqa-han-sans/master/Subset/SpoqaHanSans/Spoqa%20Han%20sans_subset%28webfont%20inclued%29/SpoqaHanSans-Bold/SpoqaHanSans-Bold.ttf) format('truetype'),
+    url(https://cdn.rawgit.com/spoqa/spoqa-han-sans/master/Subset/SpoqaHanSans/Spoqa%20Han%20sans_subset%28webfont%20inclued%29/SpoqaHanSans-Bold/SpoqaHanSans-Bold.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'SpoqahanSans';
+    font-weight: 300;
+    src: local('SpoqaHanSans-Regular'), local('SpoqaHanSans-Regular'),
+    url(https://cdn.rawgit.com/spoqa/spoqa-han-sans/master/Subset/SpoqaHanSans/Spoqa%20Han%20sans_subset%28webfont%20inclued%29/SpoqaHanSans-Regular/SpoqaHanSans-Regular.eot) format('eot'),
+    url(https://cdn.rawgit.com/spoqa/spoqa-han-sans/master/Subset/SpoqaHanSans/Spoqa%20Han%20sans_subset%28webfont%20inclued%29/SpoqaHanSans-Regular/SpoqaHanSans-Regular.svg) format('svg'),
+    url(https://cdn.rawgit.com/spoqa/spoqa-han-sans/master/Subset/SpoqaHanSans/Spoqa%20Han%20sans_subset%28webfont%20inclued%29/SpoqaHanSans-Regular/SpoqaHanSans-Regular.ttf) format('truetype'),
+    url(https://cdn.rawgit.com/spoqa/spoqa-han-sans/master/Subset/SpoqaHanSans/Spoqa%20Han%20sans_subset%28webfont%20inclued%29/SpoqaHanSans-Regular/SpoqaHanSans-Regular.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'SpoqahanSans';
+    font-weight: 100;
+    src: local('SpoqaHanSans-Thin'), local('SpoqaHanSans-Thin'),
+    url(https://cdn.rawgit.com/spoqa/spoqa-han-sans/master/Subset/SpoqaHanSans/Spoqa%20Han%20sans_subset%28webfont%20inclued%29/SpoqaHanSans-Thin/SpoqaHanSans-Thin.eot) format('eot'),
+    url(https://cdn.rawgit.com/spoqa/spoqa-han-sans/master/Subset/SpoqaHanSans/Spoqa%20Han%20sans_subset%28webfont%20inclued%29/SpoqaHanSans-Thin/SpoqaHanSans-Thin.svg) format('svg'),
+    url(https://cdn.rawgit.com/spoqa/spoqa-han-sans/master/Subset/SpoqaHanSans/Spoqa%20Han%20sans_subset%28webfont%20inclued%29/SpoqaHanSans-Thin/SpoqaHanSans-Thin.ttf) format('truetype'),
+    url(https://cdn.rawgit.com/spoqa/spoqa-han-sans/master/Subset/SpoqaHanSans/Spoqa%20Han%20sans_subset%28webfont%20inclued%29/SpoqaHanSans-Thin/SpoqaHanSans-Thin.woff) format('woff');
+}
+
+body {
+  font-family: 'Euclid Flex', 'Apple SD Gothic Neo', 'SpoqahanSans', Sans-serif;
+  font-size: 14px;
+  letter-spacing: -.015em;
+  word-spacing: .09em;
+  word-break: keep-all;
+  color: $black;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 35px;
+  letter-spacing: -.03em;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 35px;
+  letter-spacing: -.03em;
+}
+
+h3 {
+  font-weight: 100;
+  font-size: 30px;
+  letter-spacing: -.02em;
+  color: white;
+}
+
+h4 {
+  font-weight: 100;
+  font-size: 20px;
+}
+
+h5 {
+  font-weight: 100;
+  font-size: 10px;
+}
+
+p {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.65em;
+}
