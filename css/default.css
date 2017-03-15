@@ -48,6 +48,10 @@ table {
 img {
   vertical-align: bottom; }
 
+a {
+  text-decoration: none;
+}
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -387,4 +391,46 @@ hr {
 .ghost.extrasmall {
   border: 1px solid; }
 
+
+  /*--- Pagenation ---*/
+  .pagination-style ul {
+    list-style:none; 
+    float: left;
+    display:inline; 
+  }
+  .pagination-style ul li {
+    float: left;
+  }
+  .pagination-style ul li a {
+    float: left;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px #dedede solid;
+    background: none;
+    font: Regular 14px;
+    text-align: center;
+    color: #222;
+    padding: 10px;
+    margin-right: 6px;
+  }
+  .pagination-style .pagination li a:hover {
+    background: #f5f5f5;
+  }
+  .pagination-style ul li .active {
+    border: none;
+    background: #4adaaf;
+    color: #fff;
+    font-weight: bold;
+  }
+  .pagination-style ul li .active:hover {
+    border: none;
+    background: #42c49d;
+    color: #fff;
+    font-weight: bold;
+  }
+  .pagination-style ul li .arrow-right {
+    color:#999;
+  }
+  
 /*# sourceMappingURL=default.css.map */
