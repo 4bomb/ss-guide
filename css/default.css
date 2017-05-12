@@ -49,8 +49,10 @@ img {
   vertical-align: bottom; }
 
 a {
-  text-decoration: none;
-}
+  text-decoration: none; }
+
+a:visited {
+  color: inherit; }
 
 * {
   -webkit-box-sizing: border-box;
@@ -78,7 +80,7 @@ a {
   clear: both; }
 
 .container {
-  max-width: 960px;
+  max-width: 1080px;
   margin-right: auto;
   margin-left: auto; }
 
@@ -125,8 +127,24 @@ a {
 .col-1 {
   width: 8.333333333333332%; }
 
+@font-face {
+  font-family: 'Spoqa Han Sans';
+  font-weight: 700;
+  src: local("Spoqa Han Sans Bold"), url("https://cdn.rawgit.com/spoqa/spoqa-han-sans/212c9818/Subset/SpoqaHanSans/Spoqa%20Han%20Sans%20Bold.woff2") format("woff2"), url("https://cdn.rawgit.com/spoqa/spoqa-han-sans/212c9818/Subset/SpoqaHanSans/Spoqa%20Han%20Sans%20Bold.woff") format("woff"), url("https://cdn.rawgit.com/spoqa/spoqa-han-sans/212c9818/Subset/SpoqaHanSans/Spoqa%20Han%20Sans%20Bold.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Spoqa Han Sans';
+  font-weight: 400;
+  src: local("Spoqa Han Sans Regular"), url("https://cdn.rawgit.com/spoqa/spoqa-han-sans/212c9818/Subset/SpoqaHanSans/Spoqa%20Han%20Sans%20Regular.woff2") format("woff2"), url("https://cdn.rawgit.com/spoqa/spoqa-han-sans/212c9818/Subset/SpoqaHanSans/Spoqa%20Han%20Sans%20Regular.woff") format("woff"), url("https://cdn.rawgit.com/spoqa/spoqa-han-sans/212c9818/Subset/SpoqaHanSans/Spoqa%20Han%20Sans%20Regular.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Spoqa Han Sans';
+  font-weight: 300;
+  src: local("Spoqa Han Sans Light"), url("https://cdn.rawgit.com/spoqa/spoqa-han-sans/212c9818/Subset/SpoqaHanSans/Spoqa%20Han%20Sans%20Light.woff2") format("woff2"), url("https://cdn.rawgit.com/spoqa/spoqa-han-sans/212c9818/Subset/SpoqaHanSans/Spoqa%20Han%20Sans%20Light.woff") format("woff"), url("https://cdn.rawgit.com/spoqa/spoqa-han-sans/212c9818/Subset/SpoqaHanSans/Spoqa%20Han%20Sans%20Light.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Spoqa Han Sans';
+  font-weight: 100;
+  src: local("Spoqa Han Sans Thin"), url("https://cdn.rawgit.com/spoqa/spoqa-han-sans/212c9818/Subset/SpoqaHanSans/Spoqa%20Han%20Sans%20Thin.woff2") format("woff2"), url("https://cdn.rawgit.com/spoqa/spoqa-han-sans/212c9818/Subset/SpoqaHanSans/Spoqa%20Han%20Sans%20Thin.woff") format("woff"), url("https://cdn.rawgit.com/spoqa/spoqa-han-sans/212c9818/Subset/SpoqaHanSans/Spoqa%20Han%20Sans%20Thin.ttf") format("truetype"); }
 body {
-  font-family: 'Apple SD Gothic Neo', Sans-serif;
+  font-family: 'Spoqa Han Sans', Sans-serif;
   font-size: 14px;
   letter-spacing: -.015em;
   word-spacing: .09em;
@@ -134,8 +152,8 @@ body {
   color: #222; }
 
 h1 {
-  font-weight: 700;
-  font-size: 44px;
+  font-weight: 300;
+  font-size: 34px;
   letter-spacing: -.03em; }
 
 h2 {
@@ -160,328 +178,42 @@ p {
 /*******************************
           Web Layout
 *******************************/
-hr {
-  margin: 10px 0;
-  border: 1px solid #dedede;
-  border-bottom: 0; }
+.side-nav {
+  position: fixed;
+  width: 270px;
+  height: 100%;
+  padding-top: 60px;
+  padding-left: 50px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #999; }
+  .side-nav .on {
+    display: block;
+    font-weight: 500;
+    color: #42c49d; }
+  .side-nav ul > li > ul {
+    display: none;
+    padding-left: 20px; }
+  .side-nav a {
+    display: inline-block;
+    margin: 8px 0; }
 
 .section {
   padding: 60px 0; }
   .section-title {
-    font-size: 22px; }
-  .section-description {
-    margin-top: 6px;
-    font-size: 16px;
-    color: #666; }
+    margin-bottom: 40px; }
 
-.component-container {
-  margin-top: 30px; }
-.component-wrapper {
-  position: relative;
-  width: 20%;
-  height: 100%;
-  display: inline-block;
-  float: left;
-  min-height: 1px; }
-.component-title {
-  padding: 8px 0;
-  font-weight: 700;
-  font-size: 14px;
-  color: #999; }
-
-.component-title.typo {
-  padding: 8px 0 16px; }
-
-/*--- Intro ---*/
-.section.intro {
-  padding: 130px 0px 40px; }
-
-.header.intro {
+.content-title {
+  margin-bottom: 20px;
   font-weight: 500;
-  font-size: 40px; }
+  color: #222; }
 
-/*--- Color-scheme ---*/
-.component-container.color-scheme {
-  margin-top: 15px; }
-
-.component-wrapper.color-scheme {
-  width: 33.3333%;
-  padding: 15px 0;
-  padding-right: 30px; }
-
-.color-chip {
-  border: 1px solid #dedede; }
-.color-name {
-  height: 180px;
-  padding: 24px;
-  color: white;
-  font-weight: 700;
-  font-size: 16px; }
-.color-info {
-  margin: 12px 26px;
-  text-align: left; }
-  .color-info-title {
-    width: 90px;
-    padding: 6px 0;
-    color: #666; }
-
-.green.color-name {
-  background-color: #4adaaf; }
-
-.hover-green.color-name {
-  background-color: #42c49d; }
-
-.press-green.color-name {
-  background-color: #3db591; }
-
-.red.color-name {
-  background-color: #ff6699; }
-
-.yellow.color-name {
-  background-color: #ffff66;
-  color: #666; }
-
-.black.color-name {
-  background-color: #222; }
-
-.hover-black.color-name {
-  background-color: #393939; }
-
-.press-black.color-name {
-  background-color: #4a4a4a; }
-
-.dark-gray.color-name {
-  background-color: #666; }
-
-.medium-gray.color-name {
-  background-color: #999; }
-
-.light-gray.color-name {
-  background-color: #ccc; }
-
-.border.color-name {
-  background-color: #dedede;
-  color: #666; }
-
-/*--- Typo-headline ---*/
-.typo-headline.component-wrapper {
-  width: 25%; }
-
-/*--- Typo-body ---*/
-.typo-body.component-wrapper {
-  width: 33.33333%;
-  padding-right: 40px; }
-
-/*******************************
-              Typo
-*******************************/
-.body1 {
-  font-size: 14px; }
-
-.body2 {
-  font-size: 13px; }
-
-.caption {
-  font-size: 12px; }
-
-/*******************************
-            Button
-*******************************/
-/*--------------
-      Style
----------------*/
-.button {
-  cursor: pointer;
+.inline-box {
   display: inline-block;
-  padding: 0 24px;
-  outline: none;
-  border: none; }
-
-.ghost.button {
-  background-color: transparent; }
-
-/*--------------
-      Color
----------------*/
-/*--- Green ---*/
-.green.button {
-  background-color: #4adaaf;
-  color: #fff; }
-
-.green.button:hover {
-  background-color: #42c49d; }
-
-.green.button:active {
-  background-color: #3db591; }
-
-/* Ghost */
-.ghost.green {
-  background-color: transparent;
-  border-color: #4adaaf;
-  color: #4adaaf; }
-
-.ghost.green:hover {
-  background-color: transparent;
-  border-color: #42c49d;
-  color: #42c49d; }
-
-.ghost.green:active {
-  background-color: transparent;
-  border-color: #3db591;
-  color: #3db591; }
-
-/*--- White ---*/
-/*--------------
-      Size
----------------*/
-/*--- Basic ---*/
-.extralarge.button {
-  height: 50px;
-  font-weight: bold;
-  font-size: 16px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px; }
-
-.large.button {
-  height: 44px;
-  font-weight: bold;
-  font-size: 14px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px; }
-
-.medium.button {
-  height: 34px;
-  font-weight: bold;
-  font-size: 14px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px; }
-
-.small.button {
-  height: 26px;
-  font-weight: bold;
-  font-size: 12px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px; }
-
-.extrasmall.button {
-  height: 20px;
-  font-weight: bold;
-  font-size: 12px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px; }
-
-/*--- Ghost ---*/
-.ghost.extralarge {
-  border: 2px solid; }
-
-.ghost.large {
-  border: 2px solid; }
-
-.ghost.medium {
-  border: 2px solid; }
-
-.ghost.small {
-  border: 1px solid; }
-
-.ghost.extrasmall {
-  border: 1px solid; }
-
-
-  /*--- Pagination ---*/
-  .pagination-style ul {
-    list-style:none; 
-    float: left;
-    display:inline; 
-  }
-  .pagination-style ul li {
-    float: left;
-  }
-  .pagination-style ul li a {
-    float: left;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    border: 1px #dedede solid;
-    background: none;
-    font: 14px;
-    text-align: center;
-    color: #222;
-    padding: 10px;
-    margin-right: 6px;
-  }
-  .pagination-style .pagination li a:hover {
-    background: #f5f5f5;
-  }
-  .pagination-style ul li .active {
-    border: none;
-    background: #4adaaf;
-    color: #fff;
-    font-weight: bold;
-  }
-  .pagination-style ul li .active:hover {
-    border: none;
-    background: #42c49d;
-    color: #fff;
-    font-weight: bold;
-  }
-  .pagination-style ul li .arrow-right {
-    color:#999;
-  }
-
-  /*--- TAB ---*/
-  div.tab-style {
-    margin-top: 40px;
-  }
-  .tab-style ul {
-    list-style:none; 
-    float: left;
-    display: inline;
-    background: #fff;
-    height: 48px;
-    border-bottom: 1px #dedede solid;
-  }
-  .tab-style ul li {
-    height: 48px;
-    float: left;
-    vertical-align: center;
-    margin: 0 14px 0 14px;
-  }
-  .tab-style ul li.active {
-    border-bottom: 2px #4adaaf solid;
-  }
-  .tab-style ul li.active a {
-    font-weight: bold;
-    color:#4adaaf;
-  }
-  .tab-style ul li a.disalble {
-    color:#ccc;
-    pointer-events: none;
-    cursor: default;
-  }
-  .tab-style ul li.active a:hover {
-    color: #42c49d;
-  }
-  .tab-style ul li a {
-    position: relative;
-    top:50%;
-    height: 48px;
-    float: left;
-    padding:  0 10px 0 10px;
-    font: 14px;
-    color: #666;
-    line-height: 0em;
-    vertical-align: center;
-    text-align: center;
-    background: none;
-  }
-  .tab-style ul li a:hover {
-    color:#222;
-  }
-  
+  padding: 2px 6px;
+  background-color: #f5f5f5;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px; }
 
 /*# sourceMappingURL=default.css.map */
