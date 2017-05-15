@@ -23,7 +23,7 @@
     color: $hover-green;
   }
   ul > li > ul {
-    display: none;
+    // display: none;
     padding-left: 20px;
   }
   a {
@@ -39,6 +39,7 @@
 
 .content {
   &-title {
+    margin-top: 40px;
     margin-bottom: 20px;
     font-weight: 500;
     color: $black;
