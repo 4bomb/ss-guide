@@ -27,7 +27,7 @@
 }
 
 .container {
-  max-width: 1080px;
+  max-width: 1020px;
   // padding-right: 15px;
   // padding-left: 15px;
   margin-right: auto;
@@ -77,4 +77,27 @@
 }
 .col-1 {
   width: 8.333333333333332%;
+}
+
+// 웹 브레이크 포인트
+$breakpoints: ( 'narrow': (max-width: 720px), 'middle': (max-width: 1020px), 'wide': (max-width: 1560px));
+// 브레이크 포인트 매니저
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  }
+  @else {
+    @error "No value found for '#{$breakpoint}'. " + "Please make sure it is defined in '$breakpoints' map.";
+  }
+}
+
+@include respond-to('narrow') {
+  .container {
+    padding: 0 10px;
+  }
+  .col-12, .col-11, .col-10, .col-9, .col-8, .col-7, .col-6, .col-5, .col-4, .col-3, .col-2, .col-1 {
+    width: 100%;
+  }
 }

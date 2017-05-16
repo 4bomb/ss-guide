@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -49,8 +50,10 @@ img {
   vertical-align: bottom; }
 
 a {
-  text-decoration: none;
-}
+  text-decoration: none; }
+
+a:visited {
+  color: inherit; }
 
 * {
   -webkit-box-sizing: border-box;
@@ -78,7 +81,7 @@ a {
   clear: both; }
 
 .container {
-  max-width: 960px;
+  max-width: 1020px;
   margin-right: auto;
   margin-left: auto; }
 
@@ -125,8 +128,30 @@ a {
 .col-1 {
   width: 8.333333333333332%; }
 
+@media (max-width: 720px) {
+  .container {
+    padding: 0 10px; }
+
+  .col-12, .col-11, .col-10, .col-9, .col-8, .col-7, .col-6, .col-5, .col-4, .col-3, .col-2, .col-1 {
+    width: 100%; } }
+@font-face {
+  font-family: 'Spoqa Han Sans';
+  font-weight: 700;
+  src: local("Spoqa Han Sans Bold"), url("https://cdn.rawgit.com/spoqa/spoqa-han-sans/212c9818/Subset/SpoqaHanSans/Spoqa%20Han%20Sans%20Bold.woff2") format("woff2"), url("https://cdn.rawgit.com/spoqa/spoqa-han-sans/212c9818/Subset/SpoqaHanSans/Spoqa%20Han%20Sans%20Bold.woff") format("woff"), url("https://cdn.rawgit.com/spoqa/spoqa-han-sans/212c9818/Subset/SpoqaHanSans/Spoqa%20Han%20Sans%20Bold.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Spoqa Han Sans';
+  font-weight: 400;
+  src: local("Spoqa Han Sans Regular"), url("https://cdn.rawgit.com/spoqa/spoqa-han-sans/212c9818/Subset/SpoqaHanSans/Spoqa%20Han%20Sans%20Regular.woff2") format("woff2"), url("https://cdn.rawgit.com/spoqa/spoqa-han-sans/212c9818/Subset/SpoqaHanSans/Spoqa%20Han%20Sans%20Regular.woff") format("woff"), url("https://cdn.rawgit.com/spoqa/spoqa-han-sans/212c9818/Subset/SpoqaHanSans/Spoqa%20Han%20Sans%20Regular.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Spoqa Han Sans';
+  font-weight: 300;
+  src: local("Spoqa Han Sans Light"), url("https://cdn.rawgit.com/spoqa/spoqa-han-sans/212c9818/Subset/SpoqaHanSans/Spoqa%20Han%20Sans%20Light.woff2") format("woff2"), url("https://cdn.rawgit.com/spoqa/spoqa-han-sans/212c9818/Subset/SpoqaHanSans/Spoqa%20Han%20Sans%20Light.woff") format("woff"), url("https://cdn.rawgit.com/spoqa/spoqa-han-sans/212c9818/Subset/SpoqaHanSans/Spoqa%20Han%20Sans%20Light.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Spoqa Han Sans';
+  font-weight: 100;
+  src: local("Spoqa Han Sans Thin"), url("https://cdn.rawgit.com/spoqa/spoqa-han-sans/212c9818/Subset/SpoqaHanSans/Spoqa%20Han%20Sans%20Thin.woff2") format("woff2"), url("https://cdn.rawgit.com/spoqa/spoqa-han-sans/212c9818/Subset/SpoqaHanSans/Spoqa%20Han%20Sans%20Thin.woff") format("woff"), url("https://cdn.rawgit.com/spoqa/spoqa-han-sans/212c9818/Subset/SpoqaHanSans/Spoqa%20Han%20Sans%20Thin.ttf") format("truetype"); }
 body {
-  font-family: 'Apple SD Gothic Neo', Sans-serif;
+  font-family: 'Spoqa Han Sans', Sans-serif;
   font-size: 14px;
   letter-spacing: -.015em;
   word-spacing: .09em;
@@ -134,8 +159,8 @@ body {
   color: #222; }
 
 h1 {
-  font-weight: 700;
-  font-size: 44px;
+  font-weight: 300;
+  font-size: 40px;
   letter-spacing: -.03em; }
 
 h2 {
@@ -150,130 +175,179 @@ h3 {
 
 h4 {
   font-weight: 700;
-  font-size: 18px; }
+  font-size: 17px; }
 
 p {
   font-weight: 300;
-  font-size: 14px;
-  line-height: 1.65em; }
+  font-size: 16px;
+  line-height: 1.75em; }
+
+.omg {
+  background-color: red !important; }
 
 /*******************************
           Web Layout
 *******************************/
+.side-nav {
+  display: block;
+  position: fixed;
+  width: 270px;
+  height: 100%;
+  padding-top: 60px;
+  padding-left: 50px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #999; }
+  .side-nav .on a {
+    font-weight: 500;
+    color: #42c49d !important; }
+  .side-nav ul > li > ul {
+    display: none;
+    padding-left: 20px; }
+  .side-nav a {
+    display: inline-block;
+    margin: 8px 0;
+    color: #999; }
+
+@media (max-width: 1560px) {
+  .side-nav {
+    display: none; } }
+.section {
+  padding: 100px 0 130px; }
+  .section-title {
+    margin-bottom: 30px; }
+
+.content-wrapper {
+  margin-top: 20px; }
+.content-title {
+  display: inline-block;
+  margin-top: 70px;
+  font-weight: 700;
+  color: #222; }
+.content-description {
+  margin-top: 6px; }
+
+.inline-box {
+  display: inline-block;
+  padding: 2px 6px;
+  background-color: #f5f5f5;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px; }
+
 hr {
   margin: 10px 0;
   border: 1px solid #dedede;
   border-bottom: 0; }
 
-.section {
-  padding: 60px 0; }
-  .section-title {
-    font-size: 22px; }
-  .section-description {
-    margin-top: 6px;
-    font-size: 16px;
-    color: #666; }
-
-.component-container {
-  margin-top: 30px; }
-.component-wrapper {
-  position: relative;
-  width: 20%;
-  height: 100%;
-  display: inline-block;
-  float: left;
-  min-height: 1px; }
-.component-title {
-  padding: 8px 0;
-  font-weight: 700;
-  font-size: 14px;
-  color: #999; }
-
-.component-title.typo {
-  padding: 8px 0 16px; }
-
-/*--- Intro ---*/
-.section.intro {
-  padding: 130px 0px 40px; }
-
-.header.intro {
-  font-weight: 500;
-  font-size: 40px; }
-
-/*--- Color-scheme ---*/
-.component-container.color-scheme {
-  margin-top: 15px; }
-
-.component-wrapper.color-scheme {
-  width: 33.3333%;
-  padding: 15px 0;
-  padding-right: 30px; }
-
+/*--- 색상 ---*/
+.color-card-container {
+  margin-top: 40px; }
+.color-card-wrapper:nth-child(3n+1) {
+  padding: 0;
+  padding-right: 20px; }
+.color-card-wrapper:nth-child(3n+2) {
+  padding: 0 10px; }
+.color-card-wrapper:nth-child(3n+3) {
+  padding: 0;
+  padding-left: 20px; }
+.color-card-wrapper:nth-child(n+4) {
+  margin-top: 20px; }
 .color-chip {
-  border: 1px solid #dedede; }
-.color-name {
   height: 180px;
   padding: 24px;
   color: white;
-  font-weight: 700;
-  font-size: 16px; }
+  font-weight: 300;
+  font-size: 16px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px; }
 .color-info {
-  margin: 12px 26px;
-  text-align: left; }
+  margin: 20px 26px;
+  text-align: left;
+  font-weight: 300; }
   .color-info-title {
     width: 90px;
     padding: 6px 0;
     color: #666; }
 
-.green.color-name {
+.green.color-chip {
   background-color: #4adaaf; }
 
-.hover-green.color-name {
+.hover-green.color-chip {
   background-color: #42c49d; }
 
-.press-green.color-name {
+.press-green.color-chip {
   background-color: #3db591; }
 
-.red.color-name {
+.red.color-chip {
   background-color: #ff6699; }
 
-.yellow.color-name {
+.yellow.color-chip {
   background-color: #ffff66;
   color: #666; }
 
-.black.color-name {
+.black.color-chip {
   background-color: #222; }
 
-.hover-black.color-name {
+.hover-black.color-chip {
   background-color: #393939; }
 
-.press-black.color-name {
+.press-black.color-chip {
   background-color: #4a4a4a; }
 
-.dark-gray.color-name {
+.dark-gray.color-chip {
   background-color: #666; }
 
-.medium-gray.color-name {
+.medium-gray.color-chip {
   background-color: #999; }
 
-.light-gray.color-name {
+.light-gray.color-chip {
   background-color: #ccc; }
 
-.border.color-name {
+.border.color-chip {
   background-color: #dedede;
   color: #666; }
 
-/*--- Typo-headline ---*/
-.typo-headline.component-wrapper {
-  width: 25%; }
-
-/*--- Typo-body ---*/
-.typo-body.component-wrapper {
-  width: 33.33333%;
-  padding-right: 40px; }
+/*--- 타이포그래피 ---*/
+.typo-headline {
+  min-height: 120px;
+  padding: 25px;
+  background-color: #f7f7f7; }
+  .typo-headline-wrapper:first-child {
+    padding: 0;
+    padding-right: 20px; }
+  .typo-headline-wrapper {
+    padding: 0 10px; }
+  .typo-headline-wrapper:last-child {
+    padding: 0;
+    padding-left: 20px; }
+.typo-content {
+  font-weight: 700;
+  color: #222; }
+.typo-description {
+  position: absolute;
+  bottom: 25px;
+  font-size: 13px;
+  font-weight: 300;
+  color: #999; }
+.typo-body > p {
+  font-weight: 300; }
+.typo-body {
+  min-height: 135px;
+  padding: 25px 18px;
+  background-color: #f7f7f7; }
+  .typo-body-wrapper:first-child {
+    padding: 0;
+    padding-right: 20px; }
+  .typo-body-wrapper {
+    padding: 0 10px; }
+  .typo-body-wrapper:last-child {
+    padding: 0;
+    padding-left: 20px; }
 
 /*******************************
-              Typo
+           타이포그래피
 *******************************/
 .body1 {
   font-size: 14px; }
@@ -285,10 +359,10 @@ hr {
   font-size: 12px; }
 
 /*******************************
-            Button
+              버튼
 *******************************/
 /*--------------
-      Style
+      스타일
 ---------------*/
 .button {
   cursor: pointer;
@@ -301,7 +375,7 @@ hr {
   background-color: transparent; }
 
 /*--------------
-      Color
+       색상
 ---------------*/
 /*--- Green ---*/
 .green.button {
@@ -330,9 +404,8 @@ hr {
   border-color: #3db591;
   color: #3db591; }
 
-/*--- White ---*/
 /*--------------
-      Size
+       크기
 ---------------*/
 /*--- Basic ---*/
 .extralarge.button {
@@ -391,94 +464,81 @@ hr {
 .ghost.extrasmall {
   border: 1px solid; }
 
+/*******************************
+           페이지네이션
+*******************************/
+.pagenation .active a {
+  border: none;
+  color: white;
+  background-color: #4adaaf; }
+  .pagenation .active a:hover {
+    background-color: #42c49d; }
+  .pagenation .active a:active {
+    background-color: #3db591; }
+.pagenation li a {
+  float: left;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  margin-right: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 28px;
+  text-align: center;
+  color: #222;
+  border: 1px solid #dedede;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  border-radius: 16px; }
+  .pagenation li a:hover {
+    background-color: #f5f5f5; }
 
-  /*--- Pagination ---*/
-  .pagination-style ul {
-    list-style:none;
-    float: left;
-    display:inline;
-  }
-  .pagination-style ul li {
-    float: left;
-  }
-  .pagination-style ul li a {
-    float: left;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    border: 1px #dedede solid;
-    background: none;
-    font: 14px;
-    text-align: center;
-    color: #222;
-    padding: 10px;
-    margin-right: 6px;
-  }
-  .pagination-style .pagination li a:hover {
-    background: #f5f5f5;
-  }
-  .pagination-style ul li .active {
-    border: none;
-    background: #4adaaf;
-    color: #fff;
-    font-weight: bold;
-  }
-  .pagination-style ul li .active:hover {
-    border: none;
-    background: #42c49d;
-    color: #fff;
-    font-weight: bold;
-  }
-  .pagination-style ul li .arrow-right {
-    color:#999;
-  }
+.ic-arrow_left-gray {
+  display: inline-block;
+  width: 12px;
+  height: 9px;
+  background-position: -5px -5px;
+  background-image: url(../img/spritesheet.png);
+  background-repeat: no-repeat; }
 
-  /*--- TAB ---*/
-  div.tab-style {
-    margin-top: 40px;
-  }
-  .tab-style ul {
-    list-style:none;
+.ic-arrow_right-gray {
+  display: inline-block;
+  width: 12px;
+  height: 9px;
+  background-position: -27px -5px;
+  background-image: url(../img/spritesheet.png);
+  background-repeat: no-repeat; }
+
+/*******************************
+               탭
+*******************************/
+.tab {
+  display: inline-block;
+  float: left;
+  height: 48px;
+  border-bottom: 1px solid #dedede; }
+  .tab .active a {
+    font-weight: 700;
+    border-bottom: 2px solid #4adaaf;
+    color: #4adaaf; }
+    .tab .active a:hover {
+      color: #42c49d; }
+    .tab .active a:active {
+      color: #3db591; }
+  .tab .disabled a {
+    color: #ccc; }
+    .tab .disabled a:hover {
+      color: #ccc; }
+  .tab li {
     float: left;
-    display: inline;
-    background: #fff;
+    margin: 0 14px; }
+  .tab li a {
+    display: inline-block;
     height: 48px;
-    border-bottom: 1px #dedede solid;
-  }
-  .tab-style ul li {
-    height: 48px;
-    float: left;
-    vertical-align: center;
-    margin: 0 14px 0 14px;
-  }
-  .tab-style ul li.active {
-    border-bottom: 2px #4adaaf solid;
-  }
-  .tab-style ul li.active a {
-    font-weight: bold;
-    color:#4adaaf;
-  }
-  .tab-style ul li a.disalble {
-    color:#ccc;
-    pointer-events: none;
-    cursor: default;
-  }
-  .tab-style ul li.active a:hover {
-    color: #42c49d;
-  }
-  .tab-style ul li a {
-    position: relative;
-    top:50%;
-    height: 48px;
-    float: left;
-    padding:  0 10px 0 10px;
-    font: 14px;
+    padding: 0 10px;
     color: #666;
-    line-height: 0em;
-    vertical-align: center;
-    text-align: center;
-    background: none;
-  }
-  .tab-style ul li a:hover {
-    color:#222;
-  }
+    line-height: 44px; }
+    .tab li a:hover {
+      color: #222; }
+
+/*# sourceMappingURL=default.css.map */
