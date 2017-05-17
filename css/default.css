@@ -182,8 +182,8 @@ p {
   font-size: 16px;
   line-height: 1.75em; }
 
-.omg {
-  background-color: red !important; }
+body {
+  padding-bottom: 500px; }
 
 /*******************************
           Web Layout
@@ -198,12 +198,16 @@ p {
   font-size: 14px;
   font-weight: 300;
   color: #999; }
-  .side-nav .on a {
+  .side-nav li.on > a {
     font-weight: 500;
-    color: #42c49d !important; }
-  .side-nav ul > li > ul {
+    color: #42c49d; }
+  .side-nav li.on > ul {
+    display: block; }
+  .side-nav li.on > ul > li.on a {
+    font-weight: 300; }
+  .side-nav li > ul {
     display: none;
-    padding-left: 20px; }
+    padding-left: 18px; }
   .side-nav a {
     display: inline-block;
     margin: 8px 0;
@@ -226,6 +230,8 @@ p {
   color: #222; }
 .content-description {
   margin-top: 6px; }
+.content-example {
+  margin-top: 12px; }
 
 .inline-box {
   display: inline-block;
@@ -367,6 +373,7 @@ hr {
 .button {
   cursor: pointer;
   display: inline-block;
+  min-width: 120px;
   padding: 0 24px;
   outline: none;
   border: none; }
