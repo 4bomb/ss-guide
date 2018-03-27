@@ -482,6 +482,55 @@ hr {
   .tab-style ul li a:hover {
     color:#222;
   }
-  
+
+
+  /*--- Drop down menu ---*/
+  .dropdown_menu-style ul {
+    list-style: none;
+    position:relative;
+    float:left;
+  }
+  .dropdown_menu-style ul li {
+    height: 34px;
+    width: 250px;
+    border: 1px #dedede solid;
+    border-radius: 6px;
+    cursor: auto;
+  }
+  .dropdown_menu-style ul li a {
+    display: block;
+    height: 34px;
+    position: relative;
+    padding-left: 10px;
+    vertical-align: middle;
+    font: 14px;
+    font-weight: bold;
+    color: #4adaaf;
+    line-height: 1em;
+  }
+  .dropdown_menu-style ul li ul {
+    display: none;
+    list-style: none;
+    position:relative;
+    float:left;
+    border: 1px #dedede solid;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
+  .dropdown_menu-style ul li ul li {
+    border: none;
+    float: none;
+  }
+  .dropdown_menu-style ul li ul li a {
+    height: 34px;
+    width:100%;
+    font: 14px;
+    font-weight: 400;
+    color: #666;
+    position: relative;
+  }
+  .dropdown_menu-style ul li:hover > ul {
+    display: block;
+  }
 
 /*# sourceMappingURL=default.css.map */
