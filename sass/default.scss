@@ -4,9 +4,76 @@
 @import 'type';
 @import 'mixin';
 
+body {
+  padding-bottom: 500px;
+}
+
 /*******************************
           Web Layout
 *******************************/
+
+.side-nav {
+  display: block;
+  position: fixed;
+  width: 270px;
+  height: 100%;
+  padding-top: 60px;
+  padding-left: 50px;
+  font-size: 14px;
+  font-weight: 300;
+  color: $medium-gray;
+
+  li.on > a {
+    font-weight: 500;
+    color: $hover-green;
+  }
+  li.on > ul {
+    display: block;
+  }
+  li.on > ul > li.on a {
+    font-weight: 300;
+  }
+  li > ul {
+    display: none;
+    padding-left: 18px;
+  }
+  a {
+    display: inline-block;
+    margin: 8px 0;
+    color: $medium-gray;
+  }
+}
+
+@include respond-to('wide') {
+  .side-nav { display: none; }
+}
+
+
+.section {
+  padding: 100px 0 130px;
+  &-title { margin-bottom: 30px; }
+}
+
+.content {
+  &-wrapper { margin-top: 20px; }
+  &-title {
+    display: inline-block;
+    margin-top: 70px;
+    font-weight: 700;
+    color: $black;
+  }
+  &-description {
+    margin-top: 6px;
+  }
+  &-example { margin-top: 12px; }
+}
+
+.inline-box {
+  display: inline-block;
+  padding: 2px 6px;
+  background-color: #f5f5f5;
+  @include border-radius(3px);
+}
 
 hr {
   margin: 10px 0;
@@ -14,73 +81,28 @@ hr {
   border-bottom: 0;
 }
 
-.section {
-  padding: 60px 0;
-  &-title { font-size: 22px; }
-  &-description {
-    margin-top: 6px;
-    font-size: 16px;
-    color: $dark-gray;
-  }
-}
-
-.component {
-  &-container {
-    margin-top: 30px;
-  }
-  &-wrapper {
-    position: relative;
-    width: 20%;
-    height: 100%;
-    display: inline-block;
-    float: left;
-    min-height: 1px;
-  }
-  &-title {
-    padding: 8px 0;
-    font-weight: 700;
-    font-size: 14px;
-    color: $medium-gray;
-  }
-}
-
-.component-title.typo {
-  padding: 8px 0 16px;
-}
-
-/*--- Intro ---*/
-
-.section.intro {
-  padding: 130px 0px 40px;
-}
-
-.header.intro {
-  font-weight: 500;
-  font-size: 40px;
-}
-
-/*--- Color-scheme ---*/
-
-.component-container.color-scheme{ margin-top: 15px; }
-
-.component-wrapper.color-scheme {
-  width: 33.3333%;
-  padding: 15px 0;
-  padding-right: 30px;
-}
+/*--- 색상 ---*/
 
 .color {
-  &-chip { border: 1px solid $border; }
-  &-name {
+  &-card {
+    &-container { margin-top: 40px; }
+    &-wrapper:nth-child(3n+1) { padding: 0; padding-right: 20px; }
+    &-wrapper:nth-child(3n+2) { padding: 0 10px; }
+    &-wrapper:nth-child(3n+3) { padding: 0; padding-left: 20px; }
+    &-wrapper:nth-child(n+4) { margin-top: 20px; }
+  }
+  &-chip {
     height: 180px;
     padding: 24px;
     color: white;
-    font-weight: 700;
+    font-weight: 300;
     font-size: 16px;
+    @include border-radius(6px);
   }
   &-info {
-    margin: 12px 26px;
+    margin: 20px 26px;
     text-align: left;
+    font-weight: 300;
     &-title {
       width: 90px;
       padding: 6px 0;
@@ -89,55 +111,80 @@ hr {
   }
 }
 
-.green.color-name { background-color: $green; }
-.hover-green.color-name { background-color: $hover-green; }
-.press-green.color-name { background-color: $press-green; }
-.red.color-name { background-color: $red; }
-.yellow.color-name { background-color: $yellow; color: $dark-gray; }
+.green.color-chip { background-color: $green; }
+.hover-green.color-chip { background-color: $hover-green; }
+.press-green.color-chip { background-color: $press-green; }
+.red.color-chip { background-color: $red; }
+.yellow.color-chip { background-color: $yellow; color: $dark-gray; }
 
-.black.color-name { background-color: $black; }
-.hover-black.color-name { background-color: $hover-black; }
-.press-black.color-name { background-color: $press-black; }
+.black.color-chip { background-color: $black; }
+.hover-black.color-chip { background-color: $hover-black; }
+.press-black.color-chip { background-color: $press-black; }
 
-.dark-gray.color-name { background-color: $dark-gray; }
-.medium-gray.color-name { background-color: $medium-gray; }
-.light-gray.color-name { background-color: $light-gray; }
-.border.color-name { background-color: $border; color: $dark-gray; }
+.dark-gray.color-chip { background-color: $dark-gray; }
+.medium-gray.color-chip { background-color: $medium-gray; }
+.light-gray.color-chip { background-color: $light-gray; }
+.border.color-chip { background-color: $border; color: $dark-gray; }
 
-/*--- Typo-headline ---*/
 
-.typo-headline.component-wrapper {
-  width: 25%;
+/*--- 타이포그래피 ---*/
+
+.typo {
+  &-headline {
+    min-height: 120px;
+    padding: 25px;
+    background-color: #f7f7f7;
+    // @include border-radius(6px);
+    &-wrapper:first-child { padding: 0; padding-right: 20px; }
+    &-wrapper { padding: 0 10px; }
+    &-wrapper:last-child { padding: 0; padding-left: 20px; }
+  }
+  &-content {
+    font-weight: 700;
+    color: $black;
+  }
+  &-description {
+    position: absolute;
+    bottom: 25px;
+    font-size: 13px;
+    font-weight: 300;
+    color: $medium-gray;
+  }
+  &-body > p { font-weight: 300; }
+  &-body {
+    min-height: 135px;
+    padding: 25px 18px;
+    background-color: #f7f7f7;
+    &-wrapper:first-child { padding: 0; padding-right: 20px; }
+    &-wrapper { padding: 0 10px; }
+    &-wrapper:last-child { padding: 0; padding-left: 20px; }
+  }
 }
 
-
-/*--- Typo-body ---*/
-
-.typo-body.component-wrapper {
-  width: 33.33333%;
-  padding-right: 40px;
-}
 
 
 /*******************************
-              Typo
+           타이포그래피
 *******************************/
 
 .body1 { font-size: 14px; }
 .body2 { font-size: 13px; }
 .caption { font-size: 12px; }
 
+
+
 /*******************************
-            Button
+              버튼
 *******************************/
 
 /*--------------
-      Style
+      스타일
 ---------------*/
 
 .button {
   cursor: pointer;
   display: inline-block;
+  min-width: 120px;
   padding: 0 24px;
   outline: none;
   border: none;
@@ -147,9 +194,8 @@ hr {
   background-color: transparent;
 }
 
-
 /*--------------
-      Color
+       색상
 ---------------*/
 
 /*--- Green ---*/
@@ -180,14 +226,8 @@ hr {
   color: $press-green;
 }
 
-/*--- White ---*/
-
-
-
-
-
 /*--------------
-      Size
+       크기
 ---------------*/
 
 /*--- Basic ---*/
@@ -237,11 +277,87 @@ hr {
 
 
 
+/*******************************
+           페이지네이션
+*******************************/
+
+.pagenation {
+  .active a {
+    border: none;
+    color: white;
+    background-color: $green;
+    &:hover { background-color: $hover-green; }
+    &:active { background-color: $press-green; }
+  }
+  li a {
+    float: left;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin-right: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: center;
+    color: $black;
+    border: 1px solid $border;
+    @include border-radius(16px);
+    &:hover { background-color: #f5f5f5; }
+  }
+}
+
+.ic-arrow_left-gray {
+    display: inline-block;
+    width: 12px;
+    height: 9px;
+    background-position: -5px -5px;
+    background-image: url(../img/spritesheet.png);
+    background-repeat: no-repeat;
+}
+
+.ic-arrow_right-gray {
+    display: inline-block;
+    width: 12px;
+    height: 9px;
+    background-position: -27px -5px;
+    background-image: url(../img/spritesheet.png);
+    background-repeat: no-repeat;
+}
 
 
+/*******************************
+               탭
+*******************************/
 
-
-
+.tab {
+  .active a {
+    font-weight: 700;
+    border-bottom: 2px solid $green;
+    color: $green;
+    &:hover { color: $hover-green; }
+    &:active { color: $press-green; }
+  }
+  .disabled a {
+    color: $light-gray;
+    &:hover { color: $light-gray; }
+  }
+  display: inline-block;
+  float: left;
+  height: 48px;
+  border-bottom: 1px solid $border;
+  li {
+    float: left;
+    margin: 0 14px;
+  }
+  li a {
+    display: inline-block;
+    height: 48px;
+    padding: 0 10px;
+    color: $dark-gray;
+    line-height: 44px;
+    &:hover { color: $black; }
+  }
+}
 
 
 

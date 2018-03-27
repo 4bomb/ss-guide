@@ -5,68 +5,122 @@
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <title>StyleShare 웹 컴포넌트 가이드</title>
   <link rel="stylesheet" type="text/css" href="css/default.css">
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="js/default.js"></script>
 </head>
 
 <body>
-
-  <section class="section intro">
+  <nav>
+    <ul class="side-nav">
+      <li class="on">
+        <a href="#Etc">이것저것</a>
+      </li>
+      <li>
+        <a href="#Color">색상</a>
+        <ul>
+          <li>
+            <a href="#ColorPrimary">Primary Colors</a>
+          </li>
+          <li>
+            <a href="#ColorGrayscale">Grayscale Colors</a>
+          </li>
+          <li>
+            <a href="#StatusRule">Status Rule</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#Typo">타이포그래피</a>
+        <ul>
+          <li>
+            <a href="#TypoTitle">제목 크기</a>
+          </li>
+          <li>
+            <a href="#TypoBody">본문 크기</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#Space">여백</a>
+        <ul>
+          <li>
+            <a href="#SpaceRule">여백 규칙</a>
+          </li>
+          <li>
+            <a href="#SpaceSection">섹션간 여백</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#Button">버튼</a>
+        <ul>
+          <li>
+            <a href="#ButtonStyle">버튼 스타일</a>
+          </li>
+          <li>
+            <a href="#ButtonScale">버튼 크기</a>
+          </li>
+          <li>
+            <a href="#GButtonScale">고스트 버튼 크기</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#Pagenation">페이지네이션</a>
+      </li>
+      <li>
+        <a href="#Tab">탭</a>
+      </li>
+      <li>
+        <a href="#Menu">메뉴</a>
+      </li>
+      <li>
+        <a href="#Card">카드</a>
+      </li>
+    </ul>
+  </nav>
+  <section class="section ordinary">
     <div class="container">
-      <h1 class="header intro">이것저것
+      <h1 id="Etc" class="section-title">
+        이것저것
       </h1>
-      <hr>
+      <div class="col col-6">
+      <h4 class="content-title">커머스 작업 순서</h4>
+      <div class="content-wrapper">
+        <p><span class="inline-box">나혜</span> → <span class="inline-box">보미</span> → <span class="inline-box">성진</span> → <span class="inline-box">슬기</span> → <span class="inline-box">보연</span></p>
+      </div>
+
+
+      <h4 class="content-title">리소스 이름 규칙</h4>
+      <div class="content-wrapper">
+        <p><span class="inline-box">타입</span>-<span class="inline-box">화면 이름</span>-<span class="inline-box">형태</span>-<span class="inline-box">색깔</span></p>
+        <p class="content-example">하이픈으로 덩어리를 구분하고 내부에서의 구분은 언더바(_)를 사용합니다.</br>
+           예시) <span class="inline-box">ic</span>-<span class="inline-box">store</span>-<span class="inline-box">arrow_right</span>-<span class="inline-box">medium_gray</span>.png</p>
+      </div>
+      </div>
+
+      <div class="col col-6">
+      <h4 class="content-title">작업물 사이즈</h4>
+      <p class="content-description">기획전 배너, 이슈, 띠배너 사이즈 등을 적을거예요!!!!</p>
+      </div>
+
     </div>
   </section>
 
-  <section class="section color-scheme">
-    <div class="container">
-      <h4 class="section-title">기획전, 이슈 작업 순서</h4>
-      <p class="section-description">나혜 - 보미 - 용현 - 성진 - 슬기</p>
-    </div>
-  </section>
+  <hr>
 
-   <section class="section color-scheme">
+  <section class="section">
     <div class="container">
-      <h4 class="section-title">프로모션 마케팅 일감</h4>
-      <p class="section-description">커머스 프로모션 진행 시 디자인 일감은 아래와 같습니다.<br>
-*별표는 경우에 따라 작업되지 않을 수있습니다.</p>
-  <p class="section-description">1. 1:1 정방형 이미지 (스타일쉐어/ 인스타/ 페이스북) or 영상<br>
-  2. 트레이딩웍스 광고 템플릿<br>
-  3. 5:1 띠배너 (스타일쉐어 모바일 + 스타일쉐어 웹)<br>
-  4. 16:9 스토어 이슈 템플릿/기획전 디자인<br>
-  5. 이메일 프로모션 - MKT팀에서 MailChimp 템플릿으로 제작<br>
-  6. *FB 광고용 템플릿<br>
-  7. *프로모션 이벤트 페이지 - width: 1180px / 모바일 웹 640px<br>
-*오픈그래프 디자인 (이벤트 페이지 작업 시 진행)</p>
-    </div>
-  </section>
+      <h1 id="Color" class="section-title">
+        색상
+      </h1>
+      <h4 id="ColorPrimary" class="content-title">Primary Color</h4>
+      <p class="content-description">주요 색상은 Green이며, 이외에 Yellow와 Red가 있습니다.</p>
 
-  <section class="section color-scheme">
-    <div class="container">
-      <h4 class="section-title">리소스 이름 정하는 규칙</h4>
-      <p class="section-description">
-        {타입}-{페이지}-{형태}-{색깔}</br>
-        하이픈으로 덩어리를 구분하고 그 안에서의 구분은 언더바(_)를 사용합니다.</br>
-        예시) ic-store-arrow_right-medium_gray.png / 아이콘-스토어-오른쪽화살표-미디엄그레이
-      </p>
-    </div>
-  </section>
-
-  <section class="section intro">
-    <div class="container">
-      <h1 class="header intro">색상</h1>
-      <hr>
-    </div>
-  </section>
-
-
-  <section class="section color-scheme">
-    <div class="container">
-      <h4 class="section-title">Primary Colors</h4>
-      <p class="section-description">주요 색상은 Green이며, 이외에 Yellow와 Red가 있습니다.</p>
-      <div class="component-container color-scheme">
-        <div class="component-wrapper color-scheme">
-          <div class="color-chip">
-            <div class="color-name green">StyleShare Green</div>
+      <div class="col col-12 color-card-container">
+        <div class="col col-4 color-card-wrapper">
+          <div class="color-card">
+            <div class="color-chip green">Green</div>
             <table class="color-info">
               <tbody>
                 <tr>
@@ -89,9 +143,9 @@
             </table>
           </div>
         </div>
-        <div class="component-wrapper color-scheme">
-          <div class="color-chip">
-            <div class="color-name red">StyleShare Red</div>
+        <div class="col col-4 color-card-wrapper">
+          <div class="color-card">
+            <div class="color-chip red">Red</div>
             <table class="color-info">
               <tbody>
                 <tr>
@@ -114,9 +168,9 @@
             </table>
           </div>
         </div>
-        <div class="component-wrapper color-scheme">
-          <div class="color-chip">
-            <div class="color-name yellow">StyleShare Yellow</div>
+        <div class="col col-4 color-card-wrapper">
+          <div class="color-card">
+            <div class="color-chip yellow">Yellow</div>
             <table class="color-info">
               <tbody>
                 <tr>
@@ -140,17 +194,15 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <section class="section color-scheme">
-    <div class="container">
-      <h4 class="section-title">Greyscale Colors</h4>
-      <p class="section-description">회색조의 색상은 다섯가지가 있습니다.</p>
-      <div class="component-container color-scheme">
-        <div class="component-wrapper color-scheme">
-          <div class="color-chip">
-            <div class="color-name black">StyleShare Black</div>
+
+      <h4 id="ColorGrayscale" class="content-title">Grayscale Color</h4>
+      <p class="content-description">회색조의 색상은 다섯가지가 있습니다.</p>
+
+      <div class="col col-12 color-card-container">
+        <div class="col col-4 color-card-wrapper">
+          <div class="color-card">
+            <div class="color-chip black">Black</div>
             <table class="color-info">
               <tbody>
                 <tr>
@@ -173,9 +225,9 @@
             </table>
           </div>
         </div>
-        <div class="component-wrapper color-scheme">
-          <div class="color-chip">
-            <div class="color-name dark-gray">StyleShare Dark Gray</div>
+        <div class="col col-4 color-card-wrapper">
+          <div class="color-card">
+            <div class="color-chip dark-gray">Dark Gray</div>
             <table class="color-info">
               <tbody>
                 <tr>
@@ -198,9 +250,9 @@
             </table>
           </div>
         </div>
-        <div class="component-wrapper color-scheme">
-          <div class="color-chip">
-            <div class="color-name medium-gray">StyleShare Medium Gray</div>
+        <div class="col col-4 color-card-wrapper">
+          <div class="color-card">
+            <div class="color-chip medium-gray">Medium Gray</div>
             <table class="color-info">
               <tbody>
                 <tr>
@@ -223,9 +275,9 @@
             </table>
           </div>
         </div>
-        <div class="component-wrapper color-scheme">
-          <div class="color-chip">
-            <div class="color-name light-gray">StyleShare Light Gray</div>
+        <div class="col col-4 color-card-wrapper">
+          <div class="color-card">
+            <div class="color-chip light-gray">Light Gray</div>
             <table class="color-info">
               <tbody>
                 <tr>
@@ -248,9 +300,9 @@
             </table>
           </div>
         </div>
-        <div class="component-wrapper color-scheme">
-          <div class="color-chip">
-            <div class="color-name border">StyleShare Border</div>
+        <div class="col col-4 color-card-wrapper">
+          <div class="color-card">
+            <div class="color-chip border">Border</div>
             <table class="color-info">
               <tbody>
                 <tr>
@@ -274,17 +326,14 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <section class="section color-scheme">
-    <div class="container">
-      <h4 class="section-title">Status Rule</h4>
-      <p class="section-description">Hover, Press 된 상태일 때의 색상 규칙입니다. Disalble 상태의 버튼은 Light Gray를 사용합니다.</p>
-      <div class="component-container color-scheme">
-        <div class="component-wrapper color-scheme">
-          <div class="color-chip">
-            <div class="color-name green">StyleShare Green</div>
+      <h4 id="StatusRule" class="content-title">Status Rule</h4>
+      <p class="content-description">Hover, Press 된 상태일 때의 색상 규칙입니다. Disabled 상태의 버튼은 Light Gray를 사용합니다.</p>
+
+      <div class="col col-12 color-card-container">
+        <div class="col col-4 color-card-wrapper">
+          <div class="color-card">
+            <div class="color-chip green">Green</div>
             <table class="color-info">
               <tbody>
                 <tr>
@@ -303,9 +352,9 @@
             </table>
           </div>
         </div>
-        <div class="component-wrapper color-scheme">
-          <div class="color-chip">
-            <div class="color-name hover-green">StyleShare Hover Green</div>
+        <div class="col col-4 color-card-wrapper">
+          <div class="color-card">
+            <div class="color-chip hover-green">Hover Green</div>
             <table class="color-info">
               <tbody>
                 <tr>
@@ -324,14 +373,14 @@
             </table>
           </div>
         </div>
-        <div class="component-wrapper color-scheme">
-          <div class="color-chip">
-            <div class="color-name press-green">StyleShare Press Green</div>
+        <div class="col col-4 color-card-wrapper">
+          <div class="color-card">
+            <div class="color-chip press-green">Press Green</div>
             <table class="color-info">
               <tbody>
                 <tr>
                   <th class="color-info-title">Name</th>
-                  <td class="color-info-value">$green</td>
+                  <td class="color-info-value">$press-green</td>
                 </tr>
                 <tr>
                   <th class="color-info-title">HEX</th>
@@ -345,9 +394,9 @@
             </table>
           </div>
         </div>
-        <div class="component-wrapper color-scheme">
-          <div class="color-chip">
-            <div class="color-name black">StyleShare Black</div>
+        <div class="col col-4 color-card-wrapper">
+          <div class="color-card">
+            <div class="color-chip black">Black</div>
             <table class="color-info">
               <tbody>
                 <tr>
@@ -366,9 +415,9 @@
             </table>
           </div>
         </div>
-        <div class="component-wrapper color-scheme">
-          <div class="color-chip">
-            <div class="color-name hover-black">StyleShare Hover Black</div>
+        <div class="col col-4 color-card-wrapper">
+          <div class="color-card">
+            <div class="color-chip hover-black">Hover Black</div>
             <table class="color-info">
               <tbody>
                 <tr>
@@ -387,9 +436,9 @@
             </table>
           </div>
         </div>
-        <div class="component-wrapper color-scheme">
-          <div class="color-chip">
-            <div class="color-name press-black">StyleShare Press Black</div>
+        <div class="col col-4 color-card-wrapper">
+          <div class="color-card">
+            <div class="color-chip press-black">Press Black</div>
             <table class="color-info">
               <tbody>
                 <tr>
@@ -412,246 +461,215 @@
     </div>
   </section>
 
-  <section class="section intro">
-    <div class="container">
-      <h1 class="header intro">타이포그래피</h1>
-      <hr>
-    </div>
-  </section>
+  <hr>
 
-  <section class="section typo-headline">
+  <section class="section">
     <div class="container">
-      <h4 class="section-title">Headline Size</h4>
-      <p class="section-description">헤드라인은 44px, 34px, 24px, 18px로 네가지의 크기가 있습니다.</p>
-      <div class="component-container">
-        <div class="component-wrapper typo-headline">
-          <div class="component-title typo">Headline 1 - 44px</div>
-          <h1>가あA</h1>
+      <h1 id="Typo" class="section-title">타이포그래피</h1>
+      <h4 id="TypoTitle" class="content-title">제목 크기</h4>
+      <p class="content-description">네 가지의 크기로 이루어져 있습니다.</p>
+      <div class="col col-12 content-wrapper">
+        <div class="col col-3 typo-headline-wrapper">
+          <div class="typo-headline">
+            <h1 class="typo-content">가あA</h1>
+            <div class="typo-description">h1 → 40px</div>
+          </div>
         </div>
-        <div class="component-wrapper typo-headline">
-          <div class="component-title typo">Headline 2 - 34px</div>
-          <h2>가あA</h2>
+        <div class="col col-3 typo-headline-wrapper">
+          <div class="typo-headline">
+            <h2 class="typo-content">가あA</h2>
+            <div class="typo-description">h2 → 34px</div>
+          </div>
         </div>
-        <div class="component-wrapper typo-headline">
-          <div class="component-title typo">Headline 3 - 24px</div>
-          <h3>가あA</h3>
+        <div class="col col-3 typo-headline-wrapper">
+          <div class="typo-headline">
+            <h3 class="typo-content">가あA</h3>
+            <div class="typo-description">h3 → 24px</div>
+          </div>
         </div>
-        <div class="component-wrapper typo-headline">
-          <div class="component-title typo">Headline 4 - 18px</div>
-          <h4>가あA</h4>
+        <div class="col col-3 typo-headline-wrapper">
+          <div class="typo-headline">
+            <h4 class="typo-content">가あA</h4>
+            <div class="typo-description">h4 → 18px</div>
+          </div>
+        </div>
+      </div>
+      <h4 id="TypoBody" class="content-title">본문 크기</h4>
+      <p class="content-description">세 가지의 크기로 이루어져 있습니다.</p>
+      <div class="col col-12 content-wrapper">
+        <div class="col col-4 typo-body-wrapper">
+          <div class="typo-body">
+            <p class="typo-content body1">더 많은 사람들이 자신만의 멋을 찾아갈 수 있도록</br>Look good. Feel good. Do good.</p>
+            <div class="typo-description">p1 → 14px</div>
+          </div>
+        </div>
+        <div class="col col-4 typo-body-wrapper">
+          <div class="typo-body">
+            <p class="typo-content body2">더 많은 사람들이 자신만의 멋을 찾아갈 수 있도록</br>Look good. Feel good. Do good.</p>
+            <div class="typo-description">p2 → 13px</div>
+          </div>
+        </div>
+        <div class="col col-4 typo-body-wrapper">
+          <div class="typo-body">
+            <p class="typo-content caption">더 많은 사람들이 자신만의 멋을 찾아갈 수 있도록</br>Look good. Feel good. Do good.</p>
+            <div class="typo-description">caption → 12px</div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section typo-body">
+  <hr>
+
+  <section class="section">
     <div class="container">
-      <h4 class="section-title">Body Size</h4>
-      <p class="section-description">본문은 14px, 13px, 12px로 세가지의 크기가 있습니다.</p>
-      <div class="component-container">
-        <div class="component-wrapper typo-body">
-          <div class="component-title typo">Body 1 - 14px</div>
-          <p class="body1">더 많은 사람들이 자신만의 멋을 찾아갈 수 있도록 Look good. Feel good. Do good.</p>
-        </div>
-        <div class="component-wrapper typo-body">
-          <div class="component-title typo">Body 2 - 13px</div>
-          <p class="body2">더 많은 사람들이 자신만의 멋을 찾아갈 수 있도록 Look good. Feel good. Do good.</p>
-        </div>
-        <div class="component-wrapper typo-body">
-          <div class="component-title typo">Caption - 12px</div>
-          <p class="caption">더 많은 사람들이 자신만의 멋을 찾아갈 수 있도록 Look good. Feel good. Do good.</p>
-        </div>
+      <h1 id="Space" class="section-title">여백</h1>
+      <div class="col col-6">
+        <h4 id="SpaceRule" class="content-title">여백 규칙</h4>
+        <p class="content-description">여백은 6의 배수를 기준으로 값을 지정합니다.</br>예외 상황이 있을 수 있으며, 작업자가 적절히 판단합니다.</p>
+      </div>
+      <div class="col col-6">
+        <h4 id="SpaceSection" class="content-title">섹션간 여백</h4>
+        <p class="content-description">섹션 간의 여백은 36px입니다.</br>섹션과 콘텐츠 사이 여백은 18px입니다 </p>
       </div>
     </div>
   </section>
 
-   <section class="section intro">
-    <div class="container">
-      <h1 class="header intro">섹션</h1>
-      <hr>
-    </div>
-  </section>
+  <hr>
 
-  <section class="section typo-headline">
+  <section class="section">
     <div class="container">
-      <h4 class="section-title">Section Size</h4>
-      <p class="section-description">섹션 간의 여백은 36px입니다.<br>섹션과 콘텐츠 사이 여백은 18px입니다 <br>Font: 18px Bold [스타일쉐어 블랙]</p>
-      <div class="component-container">
-    </div>
-  </section>
-
-
-  <section class="section intro">
-    <div class="container">
-      <h1 class="header intro">버튼 가이드</h1>
-      <hr>
-    </div>
-  </section>
-
-  <section class="section button-style">
-    <div class="container">
-      <h4 class="section-title">Button Style</h4>
-      <p class="section-description">버튼 스타일은 Basic과 Ghost가 있습니다.</p>
-      <div class="component-container button-style">
-        <div class="component-wrapper">
-          <h5 class="component-title">Basic</h5>
-          <button class="large green button">
-            Basic button
-          </button>
+      <h1 id="Button" class="section-title">버튼</h1>
+      <h4 id="ButtonStyle" class="content-title">버튼 스타일</h4>
+      <p class="content-description">기본형과 고스트 버튼이 있습니다.</p>
+      <div class="col col-12 content-wrapper">
+        <div class="col col-2">
+          <button class="large green button">button</button>
         </div>
-        <div class="component-wrapper">
-          <h5 class="component-title">Ghost</h5>
-          <button class="large green ghost button">
-            Ghost button
-          </button>
+        <div class="col col-2">
+          <button class="large green ghost button">button</button>
         </div>
+      </div>
+
+      <h4 id="ButtonScale" class="content-title">버튼 크기</h4>
+      <p class="content-description">다섯 가지의 다양한 크기로 이루어져 있습니다.</p>
+      <div class="col col-12 content-wrapper">
+        <div class="col col-2">
+          <button class="extralarge green button">button</button>
+        </div>
+        <div class="col col-2">
+          <button class="large green button">button</button>
+        </div>
+        <div class="col col-2">
+          <button class="medium green button">button</button>
+        </div>
+        <div class="col col-2">
+          <button class="small green button">button</button>
+        </div>
+        <div class="col col-2">
+          <button class="extrasmall green button">button</button>
+        </div>
+      </div>
+
+      <h4 id="GButtonScale" class="content-title">고스트 버튼 크기</h4>
+      <p class="content-description">기본형과 다르게 크기에 따라 외곽선의 굵기가 다릅니다.</p>
+      <div class="col col-12 content-wrapper">
+        <div class="col col-2">
+          <button class="extralarge green ghost button">button</button>
+        </div>
+        <div class="col col-2">
+          <button class="large green ghost button">button</button>
+        </div>
+        <div class="col col-2">
+          <button class="medium green ghost button">button</button>
+        </div>
+        <div class="col col-2">
+          <button class="small green ghost button">button</button>
+        </div>
+        <div class="col col-2">
+          <button class="extrasmall green ghost button">button</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <hr>
+
+  <section class="section">
+    <div class="container">
+      <h1 id="Pagenation" class="section-title">페이지네이션</h1>
+
+      <h4 class="content-title">페이지네이션 스타일</h4>
+      <p class="content-description">페이지네이션은 최대 5페이지까지 노출합니다.</br>NEXT 버튼은 다음 5페이지를 불러옵니다.</p>
+      <div class="content-wrapper">
+        <ol class="pagenation">
+          <li><a href="javascript:;"><span class="ic-arrow_left-gray"></span></a></li>
+          <li class="active"><a href="javascript:;">1</a></li>
+          <li><a href="javascript:;">2</a></li>
+          <li><a href="javascript:;">3</a></li>
+          <li><a href="javascript:;">4</a></li>
+          <li><a href="javascript:;">5</a></li>
+          <li><a href="javascript:;"><span class="ic-arrow_right-gray"></span></a></li>
+        </ol>
+      </div>
+
+    </div>
+  </section>
+
+  <hr>
+
+  <section class="section">
+    <div class="container">
+      <h1 id="Tab" class="section-title">탭</h1>
+      <h4 class="content-title">탭 스타일</h4>
+      <p class="content-description">카테고리/메뉴에서 사용합니다.</p>
+      <div class="content-wrapper">
+        <ul class="tab">
+          <li class="active"><a href="javascript:;">여성의류</a></li>
+          <li><a href="javascript:;">남성의류</a></li>
+          <li><a href="javascript:;">유니섹스</a></li>
+          <li><a href="javascript:;">가방잡화</a></li>
+          <li><a href="javascript:;">신발</a></li>
+          <li><a href="javascript:;">뷰티</a></li>
+          <li class="disabled"><a href="javascript:;">기획전</a></li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <section class="section button-size">
+  <hr>
+
+  <section class="section">
     <div class="container">
-      <h4 class="section-title">Button Size</h4>
-      <p class="section-description">버튼 크기는 extralarge, large, medium, small, extrasmall가 있습니다.</p>
-      <div class="component-container button-size">
-        <div class="component-wrapper">
-          <h5 class="component-title">Extralarge</h5>
-          <button class="extralarge green button">
-            Basic button
-          </button>
-          <p>height : 50px / font : 16px bold</p>
-        </div>
-        <div class="component-wrapper">
-          <h5 class="component-title">Large</h5>
-          <button class="large green button">
-            Basic button
-          </button>
-          <p>height : 44px / font : 14px bold</p>
-        </div>
-        <div class="component-wrapper">
-          <h5 class="component-title">Medium</h5>
-          <button class="medium green button">
-            Basic button
-          </button>
-          <p>height : 34px / font : 14px bold</p>
-        </div>
-        <div class="component-wrapper">
-          <h5 class="component-title">Small</h5>
-          <button class="small green button">
-            Basic button
-          </button>
-          <p>height : 26px / font : 12px bold</p>
-        </div>
-        <div class="component-wrapper">
-          <h5 class="component-title">Extrasmall</h5>
-          <button class="extrasmall green button">
-            Basic button
-          </button>
-          <p>height : 20px / font : 12px bold</p>
-        </div>
+      <h1 id="Menu" class="section-title">메뉴</h1>
+      <h4 class="content-title">메뉴 스타일</h4>
+      <p class="content-description">어쩌고저쩌고 얄리얄리얄랑성 얄라리얄라</p>
+    </div>
+    <div class="content-wrapper">
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+  </section>
+
+  <hr>
+
+  <section class="section">
+    <div class="container">
+      <h1 id="Card" class="section-title">카드</h1>
+      <h4 class="content-title">스타일 카드</h4>
+      <p class="content-description">스타일 카드는 말입니다.. 이러쿵 저러쿵</p>
+      <div class="content-wrapper">
+
       </div>
-    </div>
-  </section>
-
-  <section class="section button-size">
-    <div class="container">
-      <h4 class="section-title">Ghost Button Size</h4>
-      <p class="section-description">고스트 버튼의 크기는 기본형과 동일하며, 크기마다 외곽선의 굵기가 다릅니다.</p>
-      <div class="component-container button-size">
-        <div class="component-wrapper">
-          <h5 class="component-title">Extralarge</h5>
-          <button class="extralarge green ghost button">
-            Basic button
-          </button>
-          <p>border: 2px / font : 16px bold</p>
-        </div>
-        <div class="component-wrapper">
-          <h5 class="component-title">Large</h5>
-          <button class="large green ghost button">
-            Basic button
-          </button>
-          <p>border: 2px / font : 16px bold</p>
-        </div>
-        <div class="component-wrapper">
-          <h5 class="component-title">Medium</h5>
-          <button class="medium green ghost button">
-            Basic button
-          </button>
-          <p>border: 2px / font : 16px bold</p>
-        </div>
-        <div class="component-wrapper">
-          <h5 class="component-title">Small</h5>
-          <button class="small green ghost button">
-            Basic button
-          </button>
-          <p>border: 1px / font : 16px bold</p>
-        </div>
-        <div class="component-wrapper">
-          <h5 class="component-title">Extrasmall</h5>
-          <button class="extrasmall green ghost button">
-            Basic button
-          </button>
-          <p>border: 1px / font : 16px bold</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section intro">
-    <div class="container">
-      <h1 class="header intro">페이지네이션 가이드</h1>
-      <hr>
-    </div>
-  </section>
-
-  <section class="section pagination-style">
-    <div class="container">
-      <h4 class="section-title">Pagination Style</h4>
-      <p class="section-description">페이지네이션은 최대 5페이지까지 노출합니다.<br>NEXT 버튼은 다음 5페이지를 불러옵니다.</p>
-      <div class="component-container pagination-style">
-        <div class="component-wrapper">
-          <h5 class="component-title">Number</h5>
-          <ul class="pagination">
-            <li><a href="#" class="active">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section intro">
-    <div class="container">
-      <h1 class="header intro">Tab 가이드</h1>
-      <hr>
-    </div>
-  </section>
-
-  <section class="section tab-style">
-    <div class="container">
-      <h4 class="section-title">Tab Style</h4>
-      <p class="section-description">탭은 카테고리/메뉴에서 사용니다.<br>양옆 padding: 10px/ 양옆 margin: 14px입니다.<Br>Active의 경우 Bold, [스타일쉐어 그린]<br>Disabled의 경우 [스타일쉐어 라이트 그레이]</p>
-      <div class="tab-style">
-            <ul>
-              <li class="active"><a href="#">여성의류</a></li>
-              <li><a href="#">남성의류</a></li>
-              <li><a href="#">유니섹스</a></li>
-              <li><a href="#">가방잡화</a></li>
-              <li><a href="#">신발</a></li>
-              <li><a href="#">뷰티</a></li>
-              <li><a class="disalble" href="#">기획전</a></li>
-            </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="section intro">
-    <div class="container">
-      <h1 class="header intro">Drop down box 가이드</h1>
-      <hr>
+      <h4 class="content-title">상품 카드</h4>
+      <p class="content-description">상품 카드는 말입니다.. 쏼라쏼라</p>
     </div>
   </section>
 
